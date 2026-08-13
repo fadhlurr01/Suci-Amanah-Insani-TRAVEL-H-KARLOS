@@ -292,9 +292,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const imageBannerHTML = pkg.image ? `
       <div class="package-image-wrapper">
         <img src="${pkg.image}" alt="${pkg.title}" loading="lazy">
-        <div class="package-duration-overlay">
-          <i class="far fa-calendar-alt"></i> ${pkg.departureDate}
-        </div>
       </div>
     ` : `
       <div class="package-noimage-wrapper" style="background: linear-gradient(135deg, #051f17 0%, #0a3829 100%); padding: 1.5rem 1.25rem 1.25rem 1.25rem; border-bottom: 2px solid var(--gold); border-radius: var(--radius-md) var(--radius-md) 0 0; position: relative;">
