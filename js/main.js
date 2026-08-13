@@ -282,6 +282,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   trackedSections.forEach(section => observer.observe(section));
 
+  // Modern Smooth Scroll Reveal Observer
+  const initScrollReveal = () => {
+    const revealElements = document.querySelectorAll('.reveal-on-scroll');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -60px 0px',
+      threshold: 0.1
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  };
+
+  initScrollReveal();
+
   /* ==========================================================================
      3. Package Card Rendering Engine
      ========================================================================== */
@@ -302,7 +322,7 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
 
     return `
-      <div class="package-card" data-category="${pkg.category}">
+      <div class="package-card reveal-on-scroll reveal-zoom" data-category="${pkg.category}">
         <div class="package-badge-tag">${pkg.promoBadge}</div>
         ${imageBannerHTML}
         <div class="package-content">
@@ -353,6 +373,8 @@ document.addEventListener('DOMContentLoaded', () => {
         openPackageModal(pkgId);
       });
     });
+
+    initScrollReveal();
   }
 
   initPackages();
