@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Gold Linear & Radial Gradients -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5e08c"/>
+      <stop offset="30%" stop-color="#d4af37"/>
+      <stop offset="70%" stop-color="#aa820a"/>
+      <stop offset="100%" stop-color="#f3d068"/>
+    </linearGradient>
+    
+    <linearGradient id="goldGradSoft" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e5c158"/>
+      <stop offset="100%" stop-color="#b89128"/>
+    </linearGradient>
+
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="85%" stop-color="#faf8f4"/>
+      <stop offset="100%" stop-color="#f3efe6"/>
+    </radialGradient>
+    
+    <filter id="goldShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#735400" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background Outer Circle -->
+  <circle cx="250" cy="250" r="235" fill="url(#bgGlow)" stroke="url(#goldGrad)" stroke-width="8" filter="url(#goldShadow)"/>
+  <circle cx="250" cy="250" r="222" fill="none" stroke="rgba(212, 175, 55, 0.3)" stroke-width="2"/>
+
+  <!-- 3D Geometric Isometric Kaaba Top Frame -->
+  <g transform="translate(250, 160)" stroke="url(#goldGrad)" stroke-width="12" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Top Rhombus Face -->
+    <polygon points="0,-45 110,-10 0,25 -110,-10" fill="rgba(212, 175, 55, 0.08)"/>
+    <!-- Bottom V Ring Frame -->
+    <path d="M -110,35 L 0,75 L 110,35" stroke-width="14"/>
+  </g>
+
+  <!-- Dome Icon (Left) & Globe Icon (Right) Accent inside SAI TOUR -->
+  <!-- Dome -->
+  <path d="M 125,230 Q 125,200 142,192 Q 150,170 150,170 Q 150,170 158,192 Q 175,200 175,230 Z" fill="url(#goldGrad)"/>
+  <circle cx="150" cy="165" r="4" fill="url(#goldGrad)"/>
+
+  <!-- Main Brand Title: SAI TOUR -->
+  <text x="250" y="255" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" font-weight="900" font-size="62" fill="url(#goldGrad)" text-anchor="middle" letter-spacing="4" filter="url(#goldShadow)">
+    SAI TOUR
+  </text>
+
+  <!-- Subtitle: SUCI AMANAH INSANI -->
+  <text x="250" y="292" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="20" fill="url(#goldGradSoft)" text-anchor="middle" letter-spacing="3.5">
+    SUCI AMANAH INSANI
+  </text>
+
+  <!-- Decorative Golden Accent Bar -->
+  <path d="M 160,308 L 340,308" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="250,304 255,308 250,312 245,308" fill="url(#goldGrad)"/>
+</svg>
